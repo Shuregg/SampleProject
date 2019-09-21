@@ -11,12 +11,14 @@ public class Justice {
         int balance = sc.nextInt();
         System.out.println("Enter the price of product");
         int price = sc.nextInt();
-        if((price * famnum) <= money) {
+        if(famnum < 0 || balance < 0 || price < 0) {
+            System.exit(0);
+        }
+        if((price * famnum) <= balance) {
             balance = (balance - (price * famnum));
             System.out.println("You can buy it for Your family! Your money: " + balance);
         }
-        else
-        {
+        else {
             System.out.println("You can not buy it for Your family");
         }
     }
