@@ -15,8 +15,8 @@ import java.util.Scanner;
                 if ((Math.pow(2, i)) == num) {
                     return true;
                 }
-            i++;
+                i++;
             }
-    return false;
+            return false;
         }
     }
