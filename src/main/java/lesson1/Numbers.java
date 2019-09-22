@@ -12,9 +12,15 @@ public class Numbers {
         System.out.println("Write the 3rd number.");
         int c = sc.nextInt();
         int min = 0;
-      if(a <= b && a <= c) min = a;
-      if(b <= a && b <= c) min = b;
-      if(c <= a && c <= b) min = c;
+      if(a <= b && a <= c) {
+          min = a;
+      }
+      if(b <= a && b <= c) {
+          min = b;
+      }
+      if(c <= a && c <= b) {
+          min = c;
+      }
         System.out.println("Minimum number: " + min);
     }
 }
