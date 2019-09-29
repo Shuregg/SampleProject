@@ -10,12 +10,18 @@ public class ArrayExample {
             System.out.println(mas[i]);
         }
     }
+
     public static float midnum(int[] arr) {
-        int sum = 0;
-        for (int i = 0; i < arr.length; i++) {
-            sum = arr[i] + sum;
+        if (arr.length > 0) {
+            int sum = 0;
+            for (int i = 0; i < arr.length; i++) {
+                sum = arr[i] + sum;
+            }
+            float midnumber = sum / arr.length;
+            return midnumber;
+        } else {
+            return -1;
         }
-        float midnumber = sum / arr.length;
-        return midnumber;
+
     }
 }
