@@ -1,4 +1,4 @@
-package lesson3;
+/*package lesson3;
 
 
 import java.util.Scanner;
@@ -24,7 +24,7 @@ public class lesson3_3 {
         else {
             int count2 = 0;
             for (int i = 0; i < (a.length() - 1) / 2 ; i++) {
-                for (int j = a.length(); j > ; j++) {
+                for (int j = a.length(); j >git ; j++) {
 
                 }
             }
@@ -53,3 +53,4 @@ public class lesson3_3 {
         }
     }
 
+*/
