@@ -1,4 +1,4 @@
-package lesson3;
+/*package lesson3;
 
 
 import java.util.Scanner;
@@ -53,3 +53,4 @@ public class lesson3_3 {
         }
     }
 
+*/
