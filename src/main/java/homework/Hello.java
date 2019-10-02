@@ -1,5 +1,7 @@
 package homework;
 
+import java.util.Scanner;
+
 public class Hello {
     public static boolean check (String txt) {
         String low = txt.toLowerCase();
@@ -10,7 +12,8 @@ public class Hello {
         }
     }
     public static void main(String[] args) {
-String text = "Здравствуйте, добрый день, привет.";
+        Scanner sc = new Scanner(System.in);
+String text = sc.next();
 if(check(text)) {
     System.out.println("Культурно!");
 } else {
