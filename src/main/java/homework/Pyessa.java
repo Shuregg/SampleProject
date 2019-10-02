@@ -4,10 +4,10 @@ import java.util.Scanner;
     public class Pyessa {
         public static void printTextPerRole(String[] roles, String[] textLines) {
             for (int i = 0; i < roles.length ; i++) {
-                System.out.println(roles[i]);
+                System.out.println('\n' + roles[i]);
                 for (int j = 0; j < textLines.length; j++) {
                     if(textLines[j].startsWith(roles[i])) {
-                        System.out.println('\n' + j - 9 + ") " + textLines[j]);
+                        System.out.println('\n' + j - 9 + ")" + textLines[j].replaceAll(roles[i] + ':', ""));
                     }
                 }
             }
