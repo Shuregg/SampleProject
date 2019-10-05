@@ -13,6 +13,6 @@ public class Student extends Human implements Polite {
     }
 
     public void goodBye() {
-        System.out.println("До свидания");
+        System.out.println("До свидания"); //Полиморфизм
     }
 }
