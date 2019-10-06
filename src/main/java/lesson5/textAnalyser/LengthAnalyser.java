@@ -1,4 +1,4 @@
-package textAnalyser;
+package lesson5.textAnalyser;
 
 public class LengthAnalyser implements Analyser {
     private int maxLength;

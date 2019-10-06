@@ -1,4 +1,4 @@
-package textAnalyser;
+package lesson5.textAnalyser;
 
 public class KeyWordAnalyser implements Analyser {
     protected String[] keyWords;
