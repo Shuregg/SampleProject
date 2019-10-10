@@ -1,4 +1,4 @@
-package homework;
+package homework.homework1_pyessa;
 
 import java.util.Scanner;
 
