@@ -42,4 +42,15 @@ public class UserService {
         }
 
     }
+    public boolean auth(String login, String password) {
+        if (users.containsKey(login)) {
+            if(users.get(login).getPassword().equals(password)) {
+                return true;
+            } else {
+                return false;
+            }
+        } else {
+            return false;
+        }
+    }
 }
