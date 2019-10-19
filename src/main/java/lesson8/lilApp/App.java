@@ -32,8 +32,9 @@ public class App {
             System.out.println("1. Добавить.");
             System.out.println("2. Просмотреть всех пользователей.");
             System.out.println("3. Редактировать пользователя.");
-            System.out.println(". Удалить по логину.");
-            System.out.println();
+            System.out.println("4. Проверка по логину.");
+            System.out.println("5. Удалить по логину.");
+            System.out.println("0. Выйти из программы.");
             answer = sc.nextInt();
             switch (answer) {
                 case 1:
@@ -49,13 +50,13 @@ public class App {
                     } else {
                         System.out.println("You can not create a user with this parameters.");
                     }
-
+                    break;
                 case 2:
                     List<User> allUsers = userService.getAllUsers();
                     for (User x : allUsers) {
                         System.out.println(x);
                     }
-
+                    break;
 
                 case 3:
                     System.out.println("Enter your login");
@@ -76,12 +77,25 @@ public class App {
                     } else {
                         System.out.println("Editing is not complete (Wrong oldLogin/newLogin or oldPassword");
                     }
+                    break;
+                case 4:
+                    System.out.println("Enter login");
+                    String logCheck = sc.next();
+                    System.out.println(userService.getByLogin(logCheck).getLogin());
+                    System.out.println(userService.getByLogin(logCheck).getPassword());
+                    System.out.println(userService.getByLogin(logCheck).getFullName());
+                    break;
+                case 5:
+                    System.out.println("Enter the login, that will be deleted");
+                    String delLog = sc.next();
+                    if (userService.deleteByLogin(delLog) == true) {
+                        System.out.println("User was deleted.");
+                    } else {
+                        System.out.println("User was not deleted.");
+                    }
+                    break;
 
-
-
-
-
-            }
+                }
         }
     }
 }
