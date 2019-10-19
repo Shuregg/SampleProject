@@ -15,9 +15,9 @@ public class UsersToList {
             List<User> users = new ArrayList<>();
             Scanner sc = new Scanner(reader);
         while(sc.hasNext()) {
-            String login = sc.nextLine();
-            String password = sc.nextLine();
-            String name = sc.nextLine();
+            String login = sc.next();
+            String password = sc.next();
+            String name = sc.next();
             User user = new User(login, password, name);
             users.add(user);
         }
