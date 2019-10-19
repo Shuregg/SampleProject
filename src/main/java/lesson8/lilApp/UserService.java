@@ -44,7 +44,7 @@ public class UserService {
     public boolean editUser(User user, String newLogin, String newPassword, String newName) {
         if (users.get(user.getLogin()) != null) {
         if(users.get(newLogin) == null) {
-            users.remove(user);
+            users.remove(user.getLogin(), user);
             User editedUser = new User(newLogin, newPassword, newName);
             users.put(newLogin, editedUser);
             return true;
