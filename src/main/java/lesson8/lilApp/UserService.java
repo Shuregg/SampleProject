@@ -17,7 +17,7 @@ public class UserService {
     }
     //
     public void saveData() {
-        FileHelper.saveToFile(PATH_TO_FILE", users);
+        FileHelper.saveToFile(PATH_TO_FILE, users);
     }
     //
     public User getByLogin(String login) {
