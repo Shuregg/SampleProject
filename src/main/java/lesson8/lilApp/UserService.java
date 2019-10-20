@@ -1,5 +1,6 @@
 package lesson8.lilApp;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -9,9 +10,13 @@ public class UserService {
     private Map<String, User> users;
 
     public UserService() {
-        users = new HashMap<>();
+        users = FileHelper.readFromFile( "src\\main\\java\\lesson8\\lilApp\\users.txt");
         User adminUser = new User("admin", "admin", "Sasha");
         users.put("admin", adminUser);
+    }
+    //
+    public void saveData() {
+        FileHelper.saveToFile("src\\main\\java\\lesson8\\lilApp\\users.txt", users);
     }
     //
     public User getByLogin(String login) {
