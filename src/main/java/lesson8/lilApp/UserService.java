@@ -8,15 +8,16 @@ import java.util.Map;
 
 public class UserService {
     private Map<String, User> users;
+    private final String PATH_TO_FILE = "src\\main\\java\\lesson8\\lilApp\\users.txt";
 
     public UserService() {
-        users = FileHelper.readFromFile( "src\\main\\java\\lesson8\\lilApp\\users.txt");
+        users = FileHelper.readFromFile(PATH_TO_FILE);
         User adminUser = new User("admin", "admin", "Sasha");
         users.put("admin", adminUser);
     }
     //
     public void saveData() {
-        FileHelper.saveToFile("src\\main\\java\\lesson8\\lilApp\\users.txt", users);
+        FileHelper.saveToFile(PATH_TO_FILE", users);
     }
     //
     public User getByLogin(String login) {
